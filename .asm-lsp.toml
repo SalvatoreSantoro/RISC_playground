@@ -1,0 +1,17 @@
+[[project]]
+path = "."
+assembler = "gas"
+instruction_set = "riscv"
+
+[project.opts]
+compiler = "riscv32-unknown-elf-gcc" # need "cc" as the first argument in `compile_flags.txt`
+compile_flags_txt = [
+  "-Wall",
+  "-Wextra",
+  "-pedantic",
+  "-ffreestanding", 
+  "-nostdlib", 
+  "-nostartfiles", 
+  "-T linker.ld"
+  ]
+
